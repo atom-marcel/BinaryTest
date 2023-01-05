@@ -1,1 +1,12 @@
-﻿
+﻿  main.cpp
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(186,1): warning C4267: "=": Konvertierung von "size_t" nach "int", Datenverlust möglich
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(306,1): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(308,40): warning C4244: "+=": Konvertierung von "double" in "uint8_t", möglicher Datenverlust
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(35,1): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(32): message : beim Kompilieren der Klasse Vorlage-Memberfunktion "void BaseNotation::Notation<uint8_t>::Evaluate_decimal(void)"
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(80): message : Siehe Verweis auf die gerade kompilierte Instanziierung "void BaseNotation::Notation<uint8_t>::Evaluate_decimal(void)" der Funktions-Vorlage.
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(143): message : Siehe Verweis auf die gerade kompilierte Klasse Vorlage-Instanziierung "BaseNotation::Notation<uint8_t>".
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(37,64): warning C4244: "+=": Konvertierung von "double" in "int", möglicher Datenverlust
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(288): warning C4715: "BaseNotation::ByteList::find_index_base64": Nicht alle Codepfade geben einen Wert zurück.
+D:\Projekte\c++\BinaryTest\BinaryTest\NotationSystem.hpp(104): warning C4715: "BaseNotation::Notation<unsigned char>::find_index": Nicht alle Codepfade geben einen Wert zurück.
+  BinaryTest.vcxproj -> D:\Projekte\c++\BinaryTest\x64\Debug\BinaryTest.exe

@@ -27,25 +27,17 @@ namespace BaseNotation
 		std::string ALP_BINARY = "01";
 		std::string ALP_OCTAL = "01234567";
 		std::string ALP_HEXADECIMAL = "0123456789ABCDEF0123456789abcdef";
-	public:
-		int base;
-		T value;
-		std::string notation;
-		std::string alphabet;
 
-		Notation(Base system, std::string value)
+		void Evaluate_decimal()
 		{
-			this->sys = system;
-			this->notation = value;
-			this->SetBase();
-			this->Evaluate_decimal();
-		}
-
-		Notation(T value)
-		{
-			this->sys = Base::Decimal;
-			this->value = value;
-			this->notation = std::to_string(this->value);
+			int dec = 0;
+			int index = 0;
+			for (int i = this->notation.size() - 1; i >= 0; i--)
+			{
+				dec += this->find_index(this->alphabet, this->notation[i]) * pow(this->base, index);
+				index++;
+			}
+			this->value = dec;
 		}
 
 		void SetBase()
@@ -74,6 +66,26 @@ namespace BaseNotation
 				break;
 			}
 		}
+	public:
+		int base;
+		T value;
+		std::string notation;
+		std::string alphabet;
+
+		Notation(Base system, std::string value)
+		{
+			this->sys = system;
+			this->notation = value;
+			this->SetBase();
+			this->Evaluate_decimal();
+		}
+
+		Notation(T value)
+		{
+			this->sys = Base::Decimal;
+			this->value = value;
+			this->notation = std::to_string(this->value);
+		}
 
 		int find_index(std::string str, char find)
 		{
@@ -89,18 +101,6 @@ namespace BaseNotation
 
 				index++;
 			}
-		}
-
-		void Evaluate_decimal()
-		{
-			int dec = 0;
-			int index = 0;
-			for (int i = this->notation.size() - 1; i >= 0; i--)
-			{
-				dec += this->find_index(this->alphabet, this->notation[i]) * pow(this->base, index);
-				index++;
-			}
-			this->value = dec;
 		}
 
 		int ConvertTo(Base system)

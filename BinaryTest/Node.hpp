@@ -26,7 +26,11 @@ public:
 
 		return 0;
 	};
-
+	/**
+	* Diese Funktion entfernt den Knoten an der gegebenen Position und liefert die gesamte Liste, außer den entfernten Knoten, zurück.
+	* @param index Der Index an dem der Knoten von der Liste entfernt werden soll.
+	* @return Die gesamte Liste, außer dem entfernten Knoten.
+	*/
 	Node<T>* remove(int index)
 	{
 		Node<T> *n = this;
